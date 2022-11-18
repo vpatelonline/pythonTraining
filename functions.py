@@ -78,11 +78,44 @@ print(even_check(10))
 
 
 
+def even_in_list_1(my_list):
+    '''If even number in list - print TRUE - Method 1'''
+    for x in my_list:
+        if x%2==0:
+            print('TRUE')
+            break
+        else:
+            pass
+            
+even_in_list_1([1,2,3,4,5,6])
 
+
+def even_in_list_2(mylist1):
+    '''If even number in list - print true - Method 2'''
+    for number in mylist1:
+        if number % 2 ==0:
+            return True
+        else:
+            pass
+
+print(even_in_list_2([1,2,3,4,5,6]))
+
+even_num=[]
+def list_even(my_list):
+    '''Return list of even numbers'''
+    for num in my_list:
+        if num%2==0:
+            even_num.append(num) 
+        else:
+            pass
+    return even_num
+            
+print(list_even([1,2,3,4,5,6]))
 
 
 # How to use lambda
 li = [1,2,3]
 new = list(map(lambda x:x+1, li))
 print(new)
+
 
