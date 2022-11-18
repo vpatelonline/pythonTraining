@@ -16,4 +16,20 @@ print(mylist2)
 
 print(mylist2.count(6))
 
+mylist3 = ['a','b','c','d','e']
+print(mylist3.index('d'))
 
+mylist3.insert (4,'A')
+print(mylist3)
+
+mylist3.pop()
+print(mylist3)
+
+mylist3.remove('b')
+print(mylist3)
+
+mylist3.reverse()
+print(mylist3)
+
+mylist3.sort()
+print(mylist3)
