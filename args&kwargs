@@ -1,0 +1,64 @@
+def myfunc(a,b):
+    #Return 10% of sum
+    return sum((a,b))*0.10
+
+print(myfunc(10,20))
+
+
+def myargsfunc(*args):
+    return sum(args)*0.10
+
+print(myargsfunc(10,20,30,40))
+
+
+def iteminargs(*args):
+    for item in args:
+        print(item)
+
+print(iteminargs(10,20,30,40))
+
+
+
+def mykwargfunc(**kwargs):
+    if 'fruit' in kwargs:
+        print('My fruit is {}'.format(kwargs['fruit']))
+    else:
+        print('I did not find any fruit here')
+
+    print(kwargs)
+    
+mykwargfunc(fruit='kiwi', veggie="lettuce")
+
+
+
+def argskwargs(*args,**kwargs):
+    print('I would like {} {}'.format(args[0],kwargs['food']))
+    print(args)
+    print(kwargs)
+
+argskwargs(10,20,30,fruit='orange',food='bread')
+
+
+#pick evens
+
+def myevensfunc(*args):
+    out =[]
+    for num in args:
+        if num%2==0:
+           out.append(num)
+    return out
+
+print(myevensfunc(2,4,3,4.4,7,-6,40))
+
+# Define a function called skyline that takes in a string, and returns a matching string where every even letter is uppercase, and every odd letter is lowercase. Assume that the incoming string only contains letters, and don't worry about numbers, spaces or punctuation. The output string can start with either an uppercase or lowercase letter, so long as letters alternate throughout the string.
+
+def skyline(x):
+    out=[]
+    for i in range(len(x)):
+        if i%2==0:
+            out.append(x[i].lower())
+        else:
+            out.append(x[i].upper())
+    return ''.join(out)
+
+print(skyline('abcdefgh'))
