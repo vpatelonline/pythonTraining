@@ -50,7 +50,10 @@ def myevensfunc(*args):
 
 print(myevensfunc(2,4,3,4.4,7,-6,40))
 
-# Define a function called skyline that takes in a string, and returns a matching string where every even letter is uppercase, and every odd letter is lowercase. Assume that the incoming string only contains letters, and don't worry about numbers, spaces or punctuation. The output string can start with either an uppercase or lowercase letter, so long as letters alternate throughout the string.
+# Define a function called skyline that takes in a string, and returns a matching string where 
+# every even letter is uppercase, and every odd letter is lowercase. Assume that the incoming string 
+# only contains letters, and don't worry about numbers, spaces or punctuation. The output string can 
+# start with either an uppercase or lowercase letter, so long as letters alternate throughout the string.
 
 def skyline(x):
     out=[]
