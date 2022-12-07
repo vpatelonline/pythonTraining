@@ -97,9 +97,73 @@ add_15 = create_adder(15)
  
 print(add_15(10))
 
+#One Way
 def animal_crackers(text):
     wordlist= text.split()
     print(wordlist)
 
-animal_crackers("Levelheaded Lama")
+    first = wordlist[0]
+    second = wordlist[1]
+    return first[0] == second[0]
+
+
+print(animal_crackers("Levelheaded Lama"))
+print(animal_crackers("Levelheaded lama"))
+print(animal_crackers("Levelheaded ama"))
+
+#Second Way
+def animal_crackers(text):
+    wordlist= text.split()
+    print(wordlist)
+    return wordlist[0][0] == wordlist[1][0]
+    
+
+print(animal_crackers("Levelheaded Lama"))
+print(animal_crackers("Levelheaded lama"))
+print(animal_crackers("Levelheaded ama"))
+
+
+#Third Way
+def animal_crackers(text):
+    wordlist= text.lower().split()
+    #or wordlist= text.upper().split()
+    print(wordlist)
+    return wordlist[0][0] == wordlist[1][0]
+    
+print(animal_crackers("Levelheaded lama"))
+
+#Find if any number is 20 or sum is 20
+
+def isTwenty(a,b):
+    if a+b==20:
+        return True
+    elif a==20:
+        return True
+    elif b==20:
+        return True
+    else:
+        return False
+
+print('\n')
+print(isTwenty(8,12))
+print(isTwenty(8,20))
+print(isTwenty(8,2))
+
+# OR
+
+def isTwenty(a,b):
+    return a+b==20 or a==20 or b==20
+        
+print('\n')
+print(isTwenty(8,12))
+print(isTwenty(8,20))
+print(isTwenty(5,15))
+print(isTwenty(6.1,13.9))
+print(isTwenty(-10,30))
+print(isTwenty(40/10,15+1))
+
+
+
+
+
 
