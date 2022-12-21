@@ -58,3 +58,28 @@ def rand_num(low,high,n):
 
 for num in rand_num(1,100,5):
     print(num)
+
+
+#Exapmple 5
+
+s="hello"
+s=iter(s)
+print(next(s))
+print(next(s))
+print(next(s))
+
+#Exapmple 6 - Generator Comprehension
+
+my_list=[1,2,3,4,5,6]
+
+gencomp=(item for item in my_list if item>3)
+
+for item in gencomp:
+    print(item)
+
+
+
+
+
+
+
