@@ -58,9 +58,3 @@ def rand_num(low,high,n):
 
 for num in rand_num(1,100,5):
     print(num)
-
-
-
-
-
-
