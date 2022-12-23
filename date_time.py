@@ -31,8 +31,8 @@ print(type(date3))
 
 datetime1=datetime(2022,12,23,14,50,15)
 datetime2=datetime(2022,12,23,12,10,25)
-datetinediff=datetime1-datetime2
-print(datetinediff)
+datetimediff=datetime1-datetime2
+print(datetimediff)
 
 
 
