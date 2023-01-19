@@ -1,0 +1,13 @@
+
+#pip install colorama
+#type python in terminal
+#from colorama import init
+#init()
+#from colorama import Fore
+#print (Fore.YELLOW + "Some yellow text")
+
+#You will see  out put  in yellow text 
+# 
+# Some yellow text
+# 
+# quit() 
