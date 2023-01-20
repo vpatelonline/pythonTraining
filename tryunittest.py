@@ -11,13 +11,15 @@ class TestCap(unittest.TestCase):
     def test_multi_word(self):
         text = 'python ninja'
         result = cap.cap_text(text)
-        self.assertEqual(result,'Python Ninja')   #This case will fail due to Ninja so fix this use ninja
+        self.assertEqual(result,'Python ninja')
 
     def test_word(self):
         text = 'python ninja'
         result = cap.title_text(text)
         self.assertEqual(result,'Python Ninja')
 
+    def test_word_in_single_line(self):
+        self.assertEqual(cap.title_text('python ninja'),'Python Ninja')
     
 if __name__=='__main__':
     unittest.main()
