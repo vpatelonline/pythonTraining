@@ -9,8 +9,12 @@ elif n==1:
 else:
     
     while count<n:
-        print(n0, end=', ')
-        nth=n0+n1
-        n0=n1
-        n1=nth
-        count+=1
+        if count==n-1:
+            print(n0)
+            break
+        else:
+            print(n0, end=', ')
+            nth=n0+n1
+            n0=n1
+            n1=nth
+            count+=1
