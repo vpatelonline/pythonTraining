@@ -30,12 +30,6 @@ for i in range(10):
 
 
 
-
-
-
-
-
-
 def fancy_fun(func):
     def wrapper():
         print("Before calling simple_fun")
