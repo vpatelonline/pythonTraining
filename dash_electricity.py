@@ -19,8 +19,7 @@ app.layout=html.Div([
                     marks={i:str(i) for i in range(year_min,year_max+1)}),
 
     dcc.Graph(id='map-graph'),
-    dash_table.DataTable(id='price-info',
-                         data=electricity.to_dict('records'))
+    dash_table.DataTable(id='price-info')
 ])
 
 @app.callback(
@@ -38,6 +37,20 @@ def update_map_graph(selected_year):
                       locations='US_State',locationmode='USA-states',
                       color='Residential Price', color_continuous_scale='reds')
     return map_fig
+
+@app.callback(
+    Output('price-info','data'),
+    Input('map-graph','clickData')
+)
+
+def update_datatable(clicked_data):
+    if clicked_data is None:
+        return []
+    US_State=clicked_data['points'][0]['location']
+    filtered_electricity=electricity[electricity['US_State']==US_State]
+    return filtered_electricity.to_dict('records')
+
+
 if __name__ == '__main__':
     app.run_server(debug=True)
 
